@@ -12,5 +12,6 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('home');
-    $router->resource('modules', ModuleController::class);//车辆管理
+    $router->resource('modules', ModuleController::class);//模块管理
+    $router->resource('projects', ProjectController::class);//项目管理
 });
