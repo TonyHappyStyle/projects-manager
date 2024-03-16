@@ -40,13 +40,13 @@
                 <div class="module">    
                    <b> {{ $module->name }}</b>
                         @if ($module->test)  
-                            <a href="{{ $module->test }}" target="__blank"><button class="access-button" data-toggle="modal" data-target="#accessModal">访问测试</button></a>  
+                            <a href="{{ $module->test }}" target="__blank"><button class="access-button" data-toggle="modal" data-target="#accessModal">测试</button></a>  
                         @endif
                         @if ($module->yanshi)
-                            <a href="{{ $module->yanshi }}" target="__blank"><button class="access-button" data-toggle="modal" data-target="#accessModal">访问演示</button></a>  
+                            <a href="{{ $module->yanshi }}" target="__blank"><button class="access-button" data-toggle="modal" data-target="#accessModal">演示</button></a>  
                         @endif
                         @if ($module->product)
-                            <a href="{{ $module->product }}" target="__blank"><button class="access-button" data-toggle="modal" data-target="#accessModal">访问生产</button></a>  
+                            <a href="{{ $module->product }}" target="__blank"><button class="access-button" data-toggle="modal" data-target="#accessModal">生产</button></a>  
                         @endif
                     <br>
                     {{-- @if ($modules->modules)    
