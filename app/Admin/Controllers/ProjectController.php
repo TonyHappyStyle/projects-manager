@@ -29,7 +29,7 @@ class ProjectController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new Module());
+        $grid = new Grid(new Project());
 
         $grid->model()->orderBy('order', 'desc');
         $grid->expandFilter();
@@ -58,7 +58,7 @@ class ProjectController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new Module());
+        $form = new Form(new Project());
         $form->text('id')->readonly();
         $form->text('name','项目名称')->setWidth(7, 2)->required();
         $form->text('order', __('排序'));
