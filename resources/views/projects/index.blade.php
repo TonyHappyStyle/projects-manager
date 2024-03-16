@@ -25,7 +25,11 @@
         border: 1px solid #ccc;  
         padding: 5px;  
         box-sizing: border-box; /* 包含边框和内边距在宽度内 */  
-    }  
+    }
+    .right-button {
+        float: right;  
+    clear: both; /* 清除浮动，避免影响其他元素 */
+    }
 </style>  
 <div class="projects">    
     @foreach ($projects as $pro)    
@@ -39,6 +43,7 @@
                 @foreach ($pro->modules as $module)    
                 <div class="module">    
                    <b> {{ $module->name }}</b>
+                        <p class="right-button">
                         @if ($module->test)  
                             <a href="{{ $module->test }}" target="__blank"><button class="access-button" data-toggle="modal" data-target="#accessModal">测试</button></a>  
                         @endif
@@ -48,6 +53,7 @@
                         @if ($module->product)
                             <a href="{{ $module->product }}" target="__blank"><button class="access-button" data-toggle="modal" data-target="#accessModal">生产</button></a>  
                         @endif
+                        </p>
                     <br>
                     {{-- @if ($modules->modules)    
                         
