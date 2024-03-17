@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',"App\Http\Controllers\HomeController@index"); 
 
 Route::get('/project/{id}',"App\Http\Controllers\ProjectsController@index")->name("project");
+Route::get('/module/{id}',"App\Http\Controllers\ModulesController@index")->name("module");

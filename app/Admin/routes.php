@@ -14,4 +14,5 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('modules', ModuleController::class);//模块管理
     $router->resource('projects', ProjectController::class);//项目管理
+    $router->resource('features', FeatureController::class);//功能管理
 });

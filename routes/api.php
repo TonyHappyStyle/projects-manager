@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 //测试
 Route::get('/projects',"App\Http\Controllers\ProjectsController@projects");
+Route::get('/modules',"App\Http\Controllers\ModulesController@modules");

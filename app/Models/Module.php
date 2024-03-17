@@ -8,7 +8,7 @@ class Module extends Model
 {
     public $timestamps = false;  
     public $table = 'modules';
-
+    //功能
     public function features()
     {
         return $this->hasMany(Feature::class);
@@ -18,4 +18,5 @@ class Module extends Model
     {
         return $this->belongsTo(Project::class);
     }
+
 }
