@@ -34,11 +34,11 @@ class HomeController extends Controller
   
     $requirementsWithStatus0 = Requirement::where('status',NULL)->whereDoesntHave('adminUserRequirements', function ($query) {  
         $query->whereIn('status', ['进行中', '已完成','已归档']); 
-    })->with('adminUserRequirements','adminUserRequirements.admin_user','module', 'module.project')->get();
+    })->with('adminUserRequirements','adminUserRequirements.adminUser','module', 'module.project')->get();
    
         $requirementsWithStatus1 = Requirement::where('status',NULL)->whereHas('adminUserRequirements', function ($query) {  
             $query->where('status', "进行中");   
-        })->with('adminUserRequirements')->get();  
+        })->with('adminUserRequirements','adminUserRequirements.adminUser')->get();  
         
        
         $requirementsWithStatus2 = Requirement::where('status',NULL)->whereDoesntHave('adminUserRequirements', function ($query) {  

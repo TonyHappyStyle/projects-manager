@@ -132,7 +132,7 @@
                                     @endif
                                     
                                     @if($adminUserRequirement->status=="已完成" || $adminUserRequirement->status=="已归档" )
-                                        <span><del>{{ $adminUserRequirement->type }}</del></span>
+                                        <span><del>{{ $adminUserRequirement->adminUser->name.'_'.$adminUserRequirement->type }}</del></span>
                                     @else
                                         <span>{{ $adminUserRequirement->type }}</span>
                                     @endif
