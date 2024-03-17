@@ -9,3 +9,5 @@ CREATE TABLE `projects-manager`.`admin_user_requirement` (
 DROP TABLE `projects-manager`.`requirement_people`;
 ALTER TABLE `projects-manager`.`requirements` 
 ADD COLUMN `module_id` INT NULL AFTER `content`;
+ALTER TABLE `projects-manager`.`requirements` 
+ADD COLUMN `status` VARCHAR(45) NULL COMMENT '归档或null' AFTER `updated_at`;

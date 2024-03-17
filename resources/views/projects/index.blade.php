@@ -33,6 +33,12 @@
         float: right;  
         clear: both; /* 清除浮动，避免影响其他元素 */
     }
+    a {  
+        text-decoration: none; /* 移除下划线 */  
+        background-color: transparent; /* 确保没有背景色造成的高亮效果 */  
+        color: inherit; /* 如果需要的话，让链接颜色继承父元素的颜色 */  
+        outline: none; /* 移除点击时可能出现的轮廓线 */  
+    }  
 </style>
 <div class="projects">        
     <div class="project">    
