@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 
-                @if ($loop->iteration % 5 == 0 && $loop->iteration != count($pro->modules))    
+                @if ($loop->iteration % 5 == 0 && $loop->iteration != count($admin_users_busy))    
                     <div style="width: 100%;"></div>    
                 @endif    
                 @endforeach    
@@ -103,7 +103,7 @@
                 </div>
             </div>
             
-            @if ($loop->iteration % 5 == 0 && $loop->iteration != count($pro->modules))    
+            @if ($loop->iteration % 5 == 0 && $loop->iteration != count($admin_users_free))    
                 <div style="width: 100%;"></div>    
             @endif    
             @endforeach    
